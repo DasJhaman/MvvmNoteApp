@@ -1,11 +1,16 @@
 package com.task.noteapp
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.task.noteapp.base.BaseActivity
+import com.task.noteapp.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-class MainActivity : AppCompatActivity() {
+@AndroidEntryPoint
+class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
     }
+
+    override fun getViewBinding() = ActivityMainBinding.inflate(layoutInflater)
 }
