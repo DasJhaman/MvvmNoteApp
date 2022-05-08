@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.updatenote.UpdateNoteFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/standard_view_spacing"
+            android:background="@color/white"
+            app:cardCornerRadius="@dimen/dimen_5"
+            app:cardElevation="@dimen/small_view_spacing">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/standard_view_spacing">
+
+                <EditText
+                    android:id="@+id/etNoteTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:autofillHints="name"
+                    android:hint="@string/note_title"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/large_text"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etNoteImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/standard_view_spacing"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:autofillHints="postalAddress"
+                    android:hint="@string/insert_image_url"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/etNoteBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/standard_view_spacing"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:autofillHints="name"
+                    android:gravity="start|top"
+                    android:hint="@string/hint_description"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/hintColor"
+                    android:textSize="@dimen/medium_text" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/large_view_spacing"
+        android:layout_marginBottom="@dimen/dime_32"
+        android:backgroundTint="@color/purple_200"
+        android:contentDescription="@string/fab_done_description"
+        android:src="@drawable/ic_done"
+        android:tintMode="@color/white"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

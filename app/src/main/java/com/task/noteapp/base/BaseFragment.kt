@@ -1,5 +1,6 @@
 package com.task.noteapp.base
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,7 +11,7 @@ import androidx.viewbinding.ViewBinding
 abstract class BaseFragment<VB : ViewBinding> : Fragment() {
     private var _binding: VB? = null
 
-    private val binding: VB
+     val binding: VB
         get() = _binding!!
 
     override fun onCreateView(
@@ -22,7 +23,14 @@ abstract class BaseFragment<VB : ViewBinding> : Fragment() {
         return binding.root
     }
 
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        onTitleChange()
+    }
+
     abstract fun getViewBinding(): VB
+
+    abstract fun onTitleChange()
 
     override fun onDestroyView() {
         super.onDestroyView()

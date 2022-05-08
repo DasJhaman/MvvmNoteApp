@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">NoteApp</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_new_note">New Note</string>
+    <string name="menu_update_note">Update Note</string>
+
+    <string name="image">image</string>
+
+    <string name="note_saved_successfully">Note saved successfully</string>
+
+    <string name="enter_note_title">Please enter note title</string>
+    <string name="delete_title">Delete Note</string>
+    <string name="delete_note_confirmation_message">Are you sure you want to permanently delete this note?</string>
+    <string name="delete">DELETE</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="hint_description">Type something…</string>
+    <string name="insert_image_url">Image url (Optional)</string>
+    <string name="note_edited">%s (edited)</string>
+    <string name="search">Search</string>
+    <string name="fab_done_description">done</string>
+    <string name="note_title_please">Enter a note title please</string>
+    <string name="note_title">Type your note title..</string>
+    <string name="no_notes_available">No notes available!!!</string>
+    <string name="note_image">Notes Image</string>
+
 </resources>
