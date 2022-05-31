@@ -9,4 +9,4 @@ This is a Simple but Complete Android Note App with clean architecture, MVVM, Ro
   Room
   LiveData
   ViewModel
-  ListAdapter for animations on data changes
+  Junit Tests for room methods
